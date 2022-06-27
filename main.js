@@ -12,5 +12,5 @@ submit.addEventListener("click", function(){
     let netAmount = ga + ga*(gst/100) + tip
     popup.style.transform = "scale(1)"
     ans.innerHTML = `Net Amount is ${netAmount}`  
-    popup.innerHTML += `<br><button onclick="location.refresh()">Reset</button>`
+    popup.innerHTML += `<br><button onclick="location.reload()">Reset</button>`
 })
