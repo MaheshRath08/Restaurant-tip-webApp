@@ -4,6 +4,7 @@ let tipEl = document.getElementById("tip")
 let submit = document.getElementById("btn")
 let popup = document.getElementById("popup")
 let ans = document.getElementById("h1")
+let containerEl = document.getElementById("container")
 
 submit.addEventListener("click", function(){
     let ga = parseFloat(grossAmount.value)
@@ -16,6 +17,7 @@ submit.addEventListener("click", function(){
     }else{
         popup.style.transform = "scale(1)"
         ans.innerHTML = `Net Amount is ${netAmount}₹`  
+        containerEl.style.transform = "scale(0)"
         popup.innerHTML += `<br><button onclick="location.reload()">Reset</button>`
     }
 })
