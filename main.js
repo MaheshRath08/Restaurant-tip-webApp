@@ -10,7 +10,12 @@ submit.addEventListener("click", function(){
     let gst = parseFloat(gstEl.value)
     let tip = parseFloat(tipEl.value)
     let netAmount = ga + ga*(gst/100) + tip
-    popup.style.transform = "scale(1)"
-    ans.innerHTML = `Net Amount is ${netAmount}₹`  
-    popup.innerHTML += `<br><button onclick="location.reload()">Reset</button>`
+    if (isNaN(netAmount)){
+        alert("PLEASE ADD VALID VALUES!!!!")
+        location.reload()
+    }else{
+        popup.style.transform = "scale(1)"
+        ans.innerHTML = `Net Amount is ${netAmount}₹`  
+        popup.innerHTML += `<br><button onclick="location.reload()">Reset</button>`
+    }
 })
